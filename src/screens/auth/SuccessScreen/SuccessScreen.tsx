@@ -10,7 +10,6 @@ type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SuccessScreen'>;
 
 export function SuccessScreen({route, navigation}: ScreenProps) {
   function goBackToBegin() {
-    // TODO: Navigate to login page
     navigation.goBack();
   }
   return (
