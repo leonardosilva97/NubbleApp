@@ -1,12 +1,14 @@
 import React from 'react';
-import {Text} from '../Text/Text';
+
 import {
   TouchableOpacityBox,
   TouchableOpacityBoxProps,
   ActivityIndicator,
 } from '@components';
+
+import {Text} from '../Text/Text';
+
 import {buttonPresets} from './buttonPresets';
-import {UseAppTheme} from '@hooks';
 
 export type ButtonPreset = 'primary' | 'outline';
 
@@ -24,7 +26,6 @@ export function Button({
   disabled = false,
   ...touchableOpacityBoxProps
 }: ButtonProps) {
-  const {colors} = UseAppTheme();
   const buttonPreset = buttonPresets[preset][disabled ? 'disabled' : 'default'];
   return (
     <TouchableOpacityBox

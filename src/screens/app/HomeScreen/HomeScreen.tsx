@@ -1,7 +1,8 @@
 import React from 'react';
+
+import {Button} from '../../../components/Button/Button';
 import {Screen} from '../../../components/Screen/Screen';
 import {Text} from '../../../components/Text/Text';
-import {Button} from '../../../components/Button/Button';
 
 export function HomeScreen() {
   return (
