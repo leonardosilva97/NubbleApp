@@ -5,19 +5,17 @@ import {useForm} from 'react-hook-form';
 
 import {Text, Screen, Button, FormTextInput} from '@components';
 import {useResetNavigationSuccess} from '@hooks';
-// import {RootStackParamList} from '@routes';
+import {AuthScreenProps} from '@routes';
 
 import {
   forgetPasswordSchema,
   ForgetPasswordSchema,
 } from './ForgetPasswordScreen';
 
-// type ScreenProps = NativeStackScreenProps<
-//   RootStackParamList,
-//   'ForgetPasswordScreen'
-// >;
-
-export function ForgetPasswordScreen() {
+export function ForgetPasswordScreen({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  navigation,
+}: AuthScreenProps<'ForgetPasswordScreen'>) {
   const {reset} = useResetNavigationSuccess();
 
   function submitForm() {

@@ -11,10 +11,8 @@ import {
   FormTextInput,
   FormPasswordInput,
 } from '@components';
-// import {RootStackParamList} from '@routes';
 
 import {signUpSchema, SignUpSchema} from './signUpSchema';
-// type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SignUpScreen'>;
 
 export function SignUpScreen() {
   // const {reset} = useResetNavigationSuccess();

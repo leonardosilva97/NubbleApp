@@ -1,16 +1,15 @@
 import React from 'react';
 
-// import {Text} from '../../../components/Text/Text';
 import {Text} from '@components';
+import {AppScreenProps} from '@routes';
 
-import {Button} from '../../../components/Button/Button';
 import {Screen} from '../../../components/Screen/Screen';
 
-export function HomeScreen() {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function SettingsScreen({navigation}: AppScreenProps<'SettingsScreen'>) {
   return (
-    <Screen>
-      <Text>Home Screen</Text>
-      <Button title="Settings" />
+    <Screen canGoBack>
+      <Text preset="headingSmall">Home Screen</Text>
     </Screen>
   );
 }
