@@ -4,8 +4,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import {IconProps} from '@components';
 
-import {ForgetPasswordScreen} from '../screens/auth/ForgetPasswordScreen/ForgetPasswordScreen';
-import {LoginScreen} from '../screens/auth/LoginScreen/LoginScreen';
+import {ForgetPasswordScreen} from '../screens/auth/ForgetPasswordScreen/ForgetPassword';
+import {LoginScreen} from '../screens/auth/LoginScreen/Login';
 import {SignUpScreen} from '../screens/auth/SignUpScreen/SignUpScreen';
 import {SuccessScreen} from '../screens/auth/SuccessScreen/SuccessScreen';
 

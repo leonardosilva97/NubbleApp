@@ -13,7 +13,7 @@ import {
 } from '@components';
 import {AuthScreenProps} from '@routes';
 
-import {loginSchema, LoginSchema} from './LoginScreen';
+import {loginSchema, LoginSchema} from './loginScreen';
 
 export function LoginScreen({navigation}: AuthScreenProps<'LoginScreen'>) {
   function navigateToSignUpScreen() {
@@ -34,6 +34,7 @@ export function LoginScreen({navigation}: AuthScreenProps<'LoginScreen'>) {
   });
 
   function submitForm({email, password}: LoginSchema) {
+    console.log('entrou');
     Alert.alert('message', `${email} ${password}`);
   }
   return (

@@ -10,7 +10,7 @@ import {AuthScreenProps} from '@routes';
 import {
   forgetPasswordSchema,
   ForgetPasswordSchema,
-} from './ForgetPasswordScreen';
+} from './forgetPasswordScreen';
 
 export function ForgetPasswordScreen({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
