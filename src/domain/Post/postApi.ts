@@ -1,26 +1,13 @@
-import {postListMock} from './postListMock';
-import {Post} from './postType';
+import {api, PageAPI, PageParams} from '@api';
 
-async function getList(): Promise<Post[]> {
-  //TODO: simular um deley na api
-  try {
-    let response = await fetch('http://127.0.0.1:3333/user/post', {
-      method: 'GET',
-      headers: {
-        Authorization:
-          'Bearer NA.ado35lgtrRDK0xCGBnwKAD09RnzP8bY17hqHZfXacKYOWS-2SBAHV8W8EB7L',
-      },
-    });
+import {PostAPI} from './postType';
 
-    let data = await response.json();
-    console.log('FETCH DATA =>', data);
-  } catch (error) {
-    console.log('erro na api', error);
-  } finally {
-    return postListMock;
-  }
+async function getList(params?: PageParams): Promise<PageAPI<PostAPI>> {
+  const response = await api.get<PageAPI<PostAPI>>('/user/post', {
+    params,
+  });
 
-  // await new Promise(resolve => setTimeout(() => resolve(''), 1000));
+  return response.data;
 }
 
 export const postApi = {
