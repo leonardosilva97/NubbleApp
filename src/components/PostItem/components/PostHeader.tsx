@@ -1,22 +1,32 @@
 import React from 'react';
-import {Image} from 'react-native';
+import {Pressable} from 'react-native';
 
 import {Post} from '@domain';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
-import {Box, Text} from '@components';
+import {Box, ProfileAvatar, Text} from '@components';
+import {AppStackParamList} from '@routes';
 
 type Props = Pick<Post, 'author'>;
+type PostHeaderNavigationProp = NativeStackNavigationProp<AppStackParamList>;
 
 export function PostHeader({author}: Props) {
+  const navigation = useNavigation<PostHeaderNavigationProp>();
+
+  function navigationToProfile() {
+    navigation.navigate('ProfileScreen', {userId: author.id});
+  }
+
   return (
-    <Box flexDirection="row" alignItems="center" marginBottom="s16">
-      <Image
-        source={{uri: author.profileURL}}
-        style={{width: 32, height: 32, borderRadius: 14}}
-      />
-      <Text preset="paragraphMedium" semiBold ml="s12">
-        {author.userName}
-      </Text>
-    </Box>
+    <Pressable onPress={navigationToProfile}>
+      <Box flexDirection="row" alignItems="center" marginBottom="s16">
+        <ProfileAvatar imageURL={author.profileURL} />
+
+        <Text preset="paragraphMedium" semiBold ml="s12">
+          {author.userName}
+        </Text>
+      </Box>
+    </Pressable>
   );
 }

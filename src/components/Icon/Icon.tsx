@@ -1,6 +1,8 @@
 import React from 'react';
 import {Pressable} from 'react-native';
 
+import {ErrorRoundIcon} from 'src/assets/icons/ErrorRoundIcon';
+
 import {UseAppTheme} from '@hooks';
 import {ThemeColors} from '@theme';
 
@@ -95,6 +97,7 @@ const iconRegistry = {
   search: SearchIcon,
   settings: SettingsIcon,
   trash: TrashIcon,
+  errorRound: ErrorRoundIcon,
 };
 
 type IconType = typeof iconRegistry;

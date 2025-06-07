@@ -2,6 +2,7 @@ export interface PostComment {
   message: string;
   id: number;
   createdAt: string;
+  createAtRelative: string;
   author: {
     id: number;
     profileURL: string;
